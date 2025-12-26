@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Electro Exam Unimate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="exam-container">
+        <h1>Electro Exam</h1>
+        <form id="exam-form">
+            <div class="question" id="q1">
+                <p>1. What is the formula for Ohm's law?</p>
+                <label><input type="radio" name="q1" value="A"> V = IR</label><br>
+                <label><input type="radio" name="q1" value="B"> P = IV</label><br>
+                <label><input type="radio" name="q1" value="C"> V = P/I</label><br>
+            </div>
+
+            <!-- Repeat similar structure for all 25 questions -->
+            
+            <!-- Image Questions -->
+            <div class="question" id="q26">
+                <p>26. What is the current shown in the image below?</p>
+                <img src="img/img1.png" alt="Circuit Image 1">
+                <label><input type="radio" name="q26" value="A"> 5A</label><br>
+                <label><input type="radio" name="q26" value="B"> 10A</label><br>
+                <label><input type="radio" name="q26" value="C"> 15A</label><br>
+            </div>
+
+            <div class="question" id="q27">
+                <p>27. What is the resistance shown in the image below?</p>
+                <img src="img/img2.png" alt="Circuit Image 2">
+                <label><input type="radio" name="q27" value="A"> 2Ω</label><br>
+                <label><input type="radio" name="q27" value="B"> 4Ω</label><br>
+                <label><input type="radio" name="q27" value="C"> 6Ω</label><br>
+            </div>
+
+            <div class="question" id="q28">
+                <p>28. Which formula is correct for the given circuit?</p>
+                <img src="img/img3.png" alt="Circuit Image 3">
+                <label><input type="radio" name="q28" value="A"> P = V^2 / R</label><br>
+                <label><input type="radio" name="q28" value="B"> P = I^2 R</label><br>
+                <label><input type="radio" name="q28" value="C"> P = V * I</label><br>
+            </div>
+
+            <button type="button" onclick="submitExam()">Submit</button>
+        </form>
+    </div>
+    
+    <script src="main.js"></script>
+</body>
+</html>
