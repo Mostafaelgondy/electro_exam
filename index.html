@@ -3,51 +3,314 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Electro Exam Unimate</title>
+    <title>Electro Exam | Unimate</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <div class="header-banner">
+        <div class="timer-container">
+            Time Remaining: <span id="timer">50:00</span>
+        </div>
+    </div>
+
     <div id="exam-container">
         <h1>Electro Exam</h1>
-        <form id="exam-form">
-            <div class="question" id="q1">
-                <p>1. What is the formula for Ohm's law?</p>
-                <label><input type="radio" name="q1" value="A"> V = IR</label><br>
-                <label><input type="radio" name="q1" value="B"> P = IV</label><br>
-                <label><input type="radio" name="q1" value="C"> V = P/I</label><br>
-            </div>
+        <p class="exam-instruction">Final Exam - Lectures 1 to 7. All 28 questions are mandatory.</p>
 
-            <!-- Repeat similar structure for all 25 questions -->
+        <form id="exam-form" action="https://formspree.io/f/mlgeeqyo" method="POST">
             
-            <!-- Image Questions -->
-            <div class="question" id="q26">
-                <p>26. What is the current shown in the image below?</p>
-                <img src="img/img1.png" alt="Circuit Image 1">
-                <label><input type="radio" name="q26" value="A"> 5A</label><br>
-                <label><input type="radio" name="q26" value="B"> 10A</label><br>
-                <label><input type="radio" name="q26" value="C"> 15A</label><br>
+            <input type="hidden" name="Student Name" id="form-name">
+            <input type="hidden" name="Final Score" id="form-score">
+            <input type="hidden" name="Time Finished" id="form-time">
+
+            <div class="questions-wrapper">
+                <div class="question-card">
+                    <p class="q-text">1. A trivalent impurity atom is added to intrinsic silicon. Which best describes the resulting charge state once it bonds?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q1" value="A" required> It remains a neutral atom.</label>
+                        <label><input type="radio" name="q1" value="B"> It becomes a positive ion.</label>
+                        <label><input type="radio" name="q1" value="C"> It becomes a negative ion (acceptor ion).</label>
+                        <label><input type="radio" name="q1" value="D"> It becomes a free electron.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">2. Germanium is more unstable than Silicon at high temperatures because:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q2" value="A" required> Atoms are smaller.</label>
+                        <label><input type="radio" name="q2" value="B"> Smaller band gap (0.67 eV) and higher thermal sensitivity.</label>
+                        <label><input type="radio" name="q2" value="C"> It is a compound semiconductor.</label>
+                        <label><input type="radio" name="q2" value="D"> Higher barrier potential.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">3. Calculate the maximum number of electrons in the 4th shell (n=4):</p>
+                    <div class="options">
+                        <label><input type="radio" name="q3" value="A" required> 16</label>
+                        <label><input type="radio" name="q3" value="B"> 8</label>
+                        <label><input type="radio" name="q3" value="C"> 32</label>
+                        <label><input type="radio" name="q3" value="D"> 18</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">4. In an n-type semiconductor, why does the excess electron NOT leave a hole in the valence band?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q4" value="A" required> Hole is filled by minority carrier.</label>
+                        <label><input type="radio" name="q4" value="B"> It is an excess particle provided by impurity, not promoted from valence band.</label>
+                        <label><input type="radio" name="q4" value="C"> Donor atom becomes a negative ion.</label>
+                        <label><input type="radio" name="q4" value="D"> n-type materials have no valence bands.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">5. Diffusion ceases when:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q5" value="A" required> All holes are filled.</label>
+                        <label><input type="radio" name="q5" value="B"> Barrier potential electric field repels further diffusion.</label>
+                        <label><input type="radio" name="q5" value="C"> Connected to a battery.</label>
+                        <label><input type="radio" name="q5" value="D"> Temp reaches 25°C.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">6. A silicon diode at 20°C above room temp (25°C) has a barrier potential of approx:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q6" value="A" required> 0.74 V</label>
+                        <label><input type="radio" name="q6" value="B"> 0.70 V</label>
+                        <label><input type="radio" name="q6" value="C"> 0.66 V</label>
+                        <label><input type="radio" name="q6" value="D"> 0.30 V</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">7. In the complete diode model, the V-I curve slope above the knee is determined by:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q7" value="A" required> Barrier potential.</label>
+                        <label><input type="radio" name="q7" value="B"> Forward dynamic resistance (r'd).</label>
+                        <label><input type="radio" name="q7" value="C"> Internal reverse resistance.</label>
+                        <label><input type="radio" name="q7" value="D"> Breakdown voltage.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">8. According to Shockley Law, well above the knee, η is:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q8" value="A" required> 2</label>
+                        <label><input type="radio" name="q8" value="B"> 1.5</label>
+                        <label><input type="radio" name="q8" value="C"> 1</label>
+                        <label><input type="radio" name="q8" value="D"> 0</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">9. Half-wave rectifier, peak secondary 50V. Practical model average DC voltage is:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q9" value="A" required> 15.9 V</label>
+                        <label><input type="radio" name="q9" value="B"> 15.7 V</label>
+                        <label><input type="radio" name="q9" value="C"> 31.8 V</label>
+                        <label><input type="radio" name="q9" value="D"> 25.0 V</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">10. Center-tapped rectifier, total peak 100V. PIV rating required is:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q10" value="A" required> 50 V</label>
+                        <label><input type="radio" name="q10" value="B"> 0.7 V</label>
+                        <label><input type="radio" name="q10" value="C"> 100 V</label>
+                        <label><input type="radio" name="q10" value="D"> 70.7 V</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">11. Why is a bridge rectifier often preferred over center-tapped?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q11" value="A" required> Uses fewer diodes.</label>
+                        <label><input type="radio" name="q11" value="B"> Higher peak output for same secondary rating.</label>
+                        <label><input type="radio" name="q11" value="C"> No filter required.</label>
+                        <label><input type="radio" name="q11" value="D"> Lower output frequency.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">12. Bridge rectifier, peak 15.6V, 1000μF, 220Ω, 60Hz. Peak-to-peak ripple is:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q12" value="A" required> 15.6 V</label>
+                        <label><input type="radio" name="q12" value="B"> 0.591 V</label>
+                        <label><input type="radio" name="q12" value="C"> 1.18 V</label>
+                        <label><input type="radio" name="q12" value="D"> 3.9 V</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">13. Load regulation for 12.0V (NL) and 11.8V (FL):</p>
+                    <div class="options">
+                        <label><input type="radio" name="q13" value="A" required> 1.69%</label>
+                        <label><input type="radio" name="q13" value="B"> 1.67%</label>
+                        <label><input type="radio" name="q13" value="C"> 0.2%</label>
+                        <label><input type="radio" name="q13" value="D"> 98%</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">14. Positive biased clipper, cathode to +3V DC. Max output before clipping:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q14" value="A" required> 3.0 V</label>
+                        <label><input type="radio" name="q14" value="B"> 0.7 V</label>
+                        <label><input type="radio" name="q14" value="C"> 3.7 V</label>
+                        <label><input type="radio" name="q14" value="D"> 2.3 V</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">15. Parallel clipper, diode anode to ground. Which part is clipped?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q15" value="A" required> Positive half-cycle.</label>
+                        <label><input type="radio" name="q15" value="B"> Negative half-cycle.</label>
+                        <label><input type="radio" name="q15" value="C"> Both half-cycles.</label>
+                        <label><input type="radio" name="q15" value="D"> Neither.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">16. To limit AC signal to ±1.4V without bias:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q16" value="A" required> Use one diode in parallel.</label>
+                        <label><input type="radio" name="q16" value="B"> Two pairs in parallel, each with two diodes in series.</label>
+                        <label><input type="radio" name="q16" value="C"> Use bridge rectifier.</label>
+                        <label><input type="radio" name="q16" value="D"> Cannot be done.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">17. Characteristic of clamper output:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q17" value="A" required> Vpp halved.</label>
+                        <label><input type="radio" name="q17" value="B"> Frequency doubled.</label>
+                        <label><input type="radio" name="q17" value="C"> Voltage swing same, DC level shifted.</label>
+                        <label><input type="radio" name="q17" value="D"> Rectified to pulsating DC.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">18. Negative clamper, cathode to ground, 20Vpp input centered at 0V. Output range:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q18" value="A" required> 0 to +20V</label>
+                        <label><input type="radio" name="q18" value="B"> -10 to +10V</label>
+                        <label><input type="radio" name="q18" value="C"> -20 to 0V</label>
+                        <label><input type="radio" name="q18" value="D"> 0 to -10V</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">19. During positive half-cycle of a voltage doubler:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q19" value="A" required> Both conduct.</label>
+                        <label><input type="radio" name="q19" value="B"> D1 forward charges C1 to Vm, D2 reverse.</label>
+                        <label><input type="radio" name="q19" value="C"> C2 charges to 2Vm.</label>
+                        <label><input type="radio" name="q19" value="D"> Output is 0V.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">20. Measure voltage tripler output across:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q20" value="A" required> C1 only.</label>
+                        <label><input type="radio" name="q20" value="B"> Transformer secondary.</label>
+                        <label><input type="radio" name="q20" value="C"> Series combination of C1 and C3.</label>
+                        <label><input type="radio" name="q20" value="D"> C2 only.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">21. Component providing electrical isolation:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q21" value="A" required> Rectifier</label>
+                        <label><input type="radio" name="q21" value="B"> Filter</label>
+                        <label><input type="radio" name="q21" value="C"> Transformer</label>
+                        <label><input type="radio" name="q21" value="D"> Regulator</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">22. Why is a hole considered a charge carrier?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q22" value="A" required> Positively charged particle.</label>
+                        <label><input type="radio" name="q22" value="B"> Allows valence electrons to shift, creating effective positive movement.</label>
+                        <label><input type="radio" name="q22" value="C"> Attracts protons.</label>
+                        <label><input type="radio" name="q22" value="D"> Exists only in n-type.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">23. In a voltage quadrupler, max charge on C4 is:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q23" value="A" required> Vm</label>
+                        <label><input type="radio" name="q23" value="B"> 3Vm</label>
+                        <label><input type="radio" name="q23" value="C"> 2Vm</label>
+                        <label><input type="radio" name="q23" value="D"> 4Vm</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">24. Why does output frequency of bridge rectifier double?</p>
+                    <div class="options">
+                        <label><input type="radio" name="q24" value="A" required> Transformer steps up speed.</label>
+                        <label><input type="radio" name="q24" value="B"> Two pulses for every one input cycle.</label>
+                        <label><input type="radio" name="q24" value="C"> Filter releases energy twice.</label>
+                        <label><input type="radio" name="q24" value="D"> 4 diodes are faster.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">25. Decreasing dynamic resistance (r'd) implies:</p>
+                    <div class="options">
+                        <label><input type="radio" name="q25" value="A" required> Better insulator.</label>
+                        <label><input type="radio" name="q25" value="B"> Increasing barrier potential.</label>
+                        <label><input type="radio" name="q25" value="C"> More conductive as IF increases.</label>
+                        <label><input type="radio" name="q25" value="D"> Reverse breakdown.</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">26. What is the V_bias and V_out (Of the positive part of wave form) in the image below?</p>
+                    <img src="img/img1.png" alt="Circuit 1" class="q-img">
+                    <div class="options">
+                        <label><input type="radio" name="q26" value="A" required> V_bias = 9.25 V ,PP of output = 9.85 </label>
+                        <label><input type="radio" name="q26" value="B"> V_bias = 3.15 V ,PP of output = 3.85 </label>
+                        <label><input type="radio" name="q26" value="C"> V_bias = 8.25 V ,PP of output = 8.95 </label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">27. What is the Load Regulation shown in the image below?</p>
+                    <img src="img/img2.png" alt="Circuit 2" class="q-img">
+                    <div class="options">
+                        <label><input type="radio" name="q27" value="A" required> 0.75%</label>
+                        <label><input type="radio" name="q27" value="B"> 0.85%</label>
+                        <label><input type="radio" name="q27" value="C"> 0.84%</label>
+                    </div>
+                </div>
+
+                <div class="question-card">
+                    <p class="q-text">28. What is the Ripple factor ?</p>
+                    <img src="img/img3.png" alt="Circuit 3" class="q-img">
+                    <div class="options">
+                        <label><input type="radio" name="q28" value="A" required> 2.9%</label>
+                        <label><input type="radio" name="q28" value="B"> 4.9%</label>
+                        <label><input type="radio" name="q28" value="C"> 3.9%</label>
+                    </div>
+                </div>
             </div>
 
-            <div class="question" id="q27">
-                <p>27. What is the resistance shown in the image below?</p>
-                <img src="img/img2.png" alt="Circuit Image 2">
-                <label><input type="radio" name="q27" value="A"> 2Ω</label><br>
-                <label><input type="radio" name="q27" value="B"> 4Ω</label><br>
-                <label><input type="radio" name="q27" value="C"> 6Ω</label><br>
-            </div>
-
-            <div class="question" id="q28">
-                <p>28. Which formula is correct for the given circuit?</p>
-                <img src="img/img3.png" alt="Circuit Image 3">
-                <label><input type="radio" name="q28" value="A"> P = V^2 / R</label><br>
-                <label><input type="radio" name="q28" value="B"> P = I^2 R</label><br>
-                <label><input type="radio" name="q28" value="C"> P = V * I</label><br>
-            </div>
-
-            <button type="button" onclick="submitExam()">Submit</button>
+            <button type="submit" id="submit-btn">Finish and Submit Exam</button>
         </form>
     </div>
-    
+
     <script src="main.js"></script>
 </body>
 </html>
